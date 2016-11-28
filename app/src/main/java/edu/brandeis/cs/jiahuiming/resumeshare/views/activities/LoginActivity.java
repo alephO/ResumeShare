@@ -1,6 +1,7 @@
 package edu.brandeis.cs.jiahuiming.resumeshare.views.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ import android.widget.Toast;
 import edu.brandeis.cs.jiahuiming.resumeshare.R;
 import edu.brandeis.cs.jiahuiming.resumeshare.controllers.UserController;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends AppCompatActivity {
 
     private Button mBtn_login_register;
     private Button mBtn_signup;
@@ -92,6 +93,6 @@ public class LoginActivity extends Activity {
                 }
             }
         });
-
+        startActivity(new Intent(LoginActivity.this,TestActivity.class));
     }
 }
